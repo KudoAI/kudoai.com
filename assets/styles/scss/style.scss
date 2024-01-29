@@ -1,0 +1,147 @@
+@charset "UTF-8";
+
+/* FUNCTIONS */
+
+@function str-replace($haystack, $needle, $replace-txt) {
+    $index: str-index($haystack, $needle);
+    @if $index {
+        @return str-slice($haystack, 1, $index - 1) + $replace-txt
+              + str-replace(str-slice($haystack, $index + str-length($needle)), $needle, $replace-txt);
+    }
+    @return $haystack;
+}
+
+/* FONTS */
+
+$font-families: (
+    'Roboto Condensed': (
+        ('RobotoCondensed-Thin', 100, normal),
+        ('RobotoCondensed-ThinItalic', 100, italic),
+        ('RobotoCondensed-ExtraLight', 200, normal),
+        ('RobotoCondensed-ExtraLightItalic', 200, italic),
+        ('RobotoCondensed-Light', 300, normal),
+        ('RobotoCondensed-LightItalic', 300, italic),
+        ('RobotoCondensed-Regular', 400, normal),
+        ('RobotoCondensed-Italic', 400, italic),
+        ('RobotoCondensed-Medium', 500, normal),
+        ('RobotoCondensed-MediumItalic', 500, italic),
+        ('RobotoCondensed-SemiBold', 600, normal),
+        ('RobotoCondensed-SemiBoldItalic', 600, italic),
+        ('RobotoCondensed-Bold', 700, normal),
+        ('RobotoCondensed-BoldItalic', 700, italic),
+        ('RobotoCondensed-ExtraBold', 800, normal),
+        ('RobotoCondensed-ExtraBoldItalic', 800, italic),
+        ('RobotoCondensed-Black', 900, normal),
+        ('RobotoCondensed-BlackItalic', 900, italic)
+    )
+);
+@mixin font-face($font-family, $full-name, $postscript-name, $font-weight, $font-style) {
+    $font-family-dashed: to-lower-case(str-replace($font-family, ' ', '-'));
+    @font-face {
+        font-family: $font-family;
+        src:
+            local('#{$full-name}'), local('#{$postscript-name}'),
+            url('../../fonts/#{$font-family-dashed}/ttf/#{$postscript-name}.ttf') format('truetype');
+        font-weight: $font-weight; font-style: $font-style;
+    }
+}
+@each $font-family, $variations in $font-families {
+    @each $variation in $variations {
+
+        // Extract elements
+        $postscript-name: nth($variation, 1); $font-weight: nth($variation, 2); $font-style: nth($variation, 3);
+
+        // Generate full name (w/ style) for 1st `local()`
+        $full-name: '#{$font-family}';
+        $style: str-slice($postscript-name, str-index($postscript-name, '-') + 1);
+        @if $style != 'Regular' { // insert spaces
+
+            // Find indices of uppercase letters
+            $upper-indices: ();
+            @for $i from 2 through str-length($style) { // start at 2 since 1st char is irrelevant to spacing
+                $char: str-slice($style, $i, $i);
+                @if $char == to-upper-case($char) { $upper-indices: append($upper-indices, $i); }
+            }
+
+            // Insert spaces if needed
+            @if length($upper-indices) > 0 {
+                $offset: 0;
+                @each $index in $upper-indices {
+                    $index: $index + $offset; // since each iteration increases length +1
+                    $style: str-insert($style, " ", $index); // insert the space
+                    $offset: $offset + 1;
+                }
+            }
+
+            $full-name: '#{$font-family} #{$style}';
+        }
+
+        @include font-face($font-family, $full-name, $postscript-name, $font-weight, $font-style);
+    }
+}
+
+/* MAIN */
+
+*:not(.container) { box-sizing: border-box }
+body {
+    color: #fff ; background-color: #000 ; padding-top: 12vh ;
+    text-align: center ; font-size: 14px ; line-height: 20px ;
+    font-family: Roboto Condensed, sans-serif }
+.container {
+    max-width: 940px ; margin-left: auto ; margin-right: auto ;
+    grid-column-gap: 16px ; grid-row-gap: 16px ; flex-direction: column ;
+    grid-template-columns: 1fr 1fr ; grid-auto-columns: 1fr ; align-items: stretch
+}
+.hero-logo { width: 75vw ; max-width: 975px ; flex: 1 ; align-self: center ; margin-top: 10vh ; margin-bottom: 42px }
+
+/* CTA */
+
+.join {
+    width: 42% ; float: left ; letter-spacing: 4px ; text-transform: uppercase ;
+    margin: 11px 0 55px ; font-size: 22px ; display: block }
+.beta-line {
+    width: 29% ; height: 1px ; float: left ; position: relative ; top: 21px ;
+    background-color: rgba(255, 255, 255, .36)
+}
+
+/* SIGNUP FORM */
+
+.sign-up-form { width: 415px ; margin: 35px auto 66px ; display: block }
+.input {
+    width: 100% ; height: 38px ; color: #333 ; vertical-align: middle ; background-color: #fff ; display: block ;
+    border: 1px solid #ccc ; margin-bottom: 10px ; padding: 8px 12px ; font-size: 14px ; line-height: 1.42857 }
+.input:focus { border-color: #3898ec ; outline: 0 }
+.field {
+    height: 54px ; color: #262c46 ; text-align: center ; text-transform: uppercase ;
+    border: 0 solid #000 ; margin-bottom: 19px ; padding-left: 20px ; padding-right: 20px ;
+    font-size: 16px ; transition: box-shadow .15s }
+.field:focus { box-shadow: inset 0 0 0 2px #00caf2 }
+.button {
+    width: 100% ; height: 54px ; color: #fff ; text-align: center ; text-transform: uppercase ;
+    background-color: rgba(0, 0, 0, 0) ; border: 3px solid #fff ; margin-left: -1px ;
+    padding: 4px 29px ; font-size: 22px ; font-weight: 700 ; text-decoration: none ;
+    transition: background-color .3s, color .3s ; display: block }
+.button:hover { color: #000 ; background-color: #fff }
+
+/* FOOTER */
+
+footer {
+    color: #7e7c87 ; padding: 38px 0 34px ;
+    position: fixed ; bottom: 0 ; left: 0 ; right: 0 ;
+}
+.copyright { color: rgba(255, 255, 255, .52) ; text-align: center ; margin-bottom: 16px }
+.social-btn { opacity: .44 ; margin: 12px ; transition: all .2s }
+.social-btn:hover { opacity: 1 }
+
+@media screen and (max-width: 991px) {
+    .join { width: 50% } .beta-line { width: 25% }}
+
+@media screen and (max-width: 767px) {
+    .hero-logo { width: 100% ; margin: 17vh 0 45px ; padding: 0 10px }}
+
+@media screen and (max-width: 479px) {
+    .container { padding: 0 10px }
+    .hero-logo { padding: 0 10px }
+    .join { width: 75% ; font-size: 19px ; margin-bottom: 35px }
+    .beta-line { width: 12% } .sign-up-form { width: 100% ; margin-top: 22px }
+    .social-btn { margin-right: 17px } /* spread footer icons out */ }
