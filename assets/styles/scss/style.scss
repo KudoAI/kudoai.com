@@ -80,20 +80,25 @@ $font-families: (
     }
 }
 
-/* MAIN */
+/* GENERAL */
 
 *:not(.container) { box-sizing: border-box }
+a { text-decoration: none }
 body {
     color: #fff ; background-color: #000 ; padding-top: 12vh ;
     text-align: center ; font-size: 14px ; line-height: 20px ;
     font-family: Roboto Condensed, sans-serif }
-a { text-decoration: none }
+canvas { /* Matrix bg */
+    position: fixed ; width: 100% ; height: 100% ; left: 0 ; top: 0 ; z-index: -1 }
+.dg.ac { display: none }
 .container {
     max-width: 940px ; margin-left: auto ; margin-right: auto ;
     grid-column-gap: 16px ; grid-row-gap: 16px ; flex-direction: column ;
     grid-template-columns: 1fr 1fr ; grid-auto-columns: 1fr ; align-items: stretch
 }
-.hero-logo { width: 100% ; max-width: 975px ; flex: 1 ; align-self: center ; margin-top: 10vh ; margin-bottom: 42px }
+.hero-logo {
+    width: 100% ; max-width: 975px ; flex: 1 ; align-self: center ;
+    margin-top: 10vh ; margin-bottom: 42px }
 
 /* CTA */
 
@@ -113,10 +118,10 @@ a { text-decoration: none }
     border: 1px solid #ccc ; margin-bottom: 10px ; padding: 8px 12px ; font-size: 14px ; line-height: 1.42857 }
 .input:focus { border-color: #3898ec ; outline: 0 }
 .field {
-    height: 54px ; color: #262c46 ; text-align: center ; text-transform: uppercase ;
-    border: 0 solid #000 ; margin-bottom: 19px ; padding-left: 20px ; padding-right: 20px ;
-    font-size: 16px ; transition: box-shadow .15s }
-.field:focus { box-shadow: inset 0 0 0 2px #00caf2 }
+    height: 54px ; color: white ; text-align: center ; text-transform: uppercase ;
+    border: 1px solid white ; margin-bottom: 19px ; padding-left: 20px ; padding-right: 20px ;
+    font-size: 16px ; transition: box-shadow .15s ; background: none }
+.field:focus { box-shadow: inset 0 0 0 2px green }
 .button {
     width: 100% ; height: 54px ; color: #fff ; text-align: center ; text-transform: uppercase ;
     background-color: rgba(0, 0, 0, 0) ; border: 3px solid #fff ; margin-left: -1px ;
