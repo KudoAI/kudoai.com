@@ -83,7 +83,7 @@ $font-families: (
 /* GENERAL */
 
 *:not(.container) { box-sizing: border-box }
-a, .button { text-decoration: none ; cursor: crosshair }
+a, .submit-btn { text-decoration: none ; cursor: crosshair }
 body {
     color: #fff ; background-color: #000 ; padding-top: 12vh ;
     text-align: center ; font-size: 14px ; line-height: 20px ;
@@ -122,12 +122,12 @@ canvas { /* Matrix bg */
     border: 1px solid white ; margin-bottom: 19px ; padding-left: 20px ; padding-right: 20px ;
     font-size: 16px ; transition: box-shadow .15s ; background: none }
 .field:focus { box-shadow: inset 0 0 0 2px #00caf2 }
-.button {
+.submit-btn {
     width: 100% ; height: 54px ; color: #fff ; text-align: center ; text-transform: uppercase ;
     background-color: rgba(0, 0, 0, 0) ; border: 3px solid #fff ; margin-left: -1px ;
     padding: 4px 29px ; font-size: 22px ; font-weight: 700 ; text-decoration: none ;
     transition: background-color .3s, color .3s ; display: block }
-.button:hover { color: #000 ; background-color: #fff }
+.submit-btn:hover { color: #000 ; background-color: #fff }
 
 /* FOOTER */
 
