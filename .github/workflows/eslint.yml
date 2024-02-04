@@ -20,10 +20,12 @@ jobs:
         node-version: 16
 
     - name: Install dependencies
-      run: npm ci --prefix utils/eslint/
+      run: npm ci
+      working-directory: utils/eslint/
 
     - name: Run ESLint
-      run: npm run lint --prefix utils/eslint/
+      run: npm run lint
+      working-directory: utils/eslint/
 
     - name: Cache node modules and .eslintrc.js
       uses: actions/cache@v2
