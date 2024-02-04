@@ -1,4 +1,4 @@
-import * as datGui from "https://cdn.skypack.dev/dat.gui@0.7.7"
+import * as datGui from 'https://cdn.skypack.dev/dat.gui@0.7.7'
 
 const state = {
     fps: 13, size: 12, charset: '0123456789ABCDEF', secDelayTilColorChange: 10,
@@ -19,7 +19,7 @@ const resize = () => {
     p = Array(Math.ceil(w / state.size)).fill(0)
 }
 window.addEventListener('resize', resize)
-sizeCtrl.onFinishChange(s => resize())
+sizeCtrl.onFinishChange(resize)
 resize()
 
 const random = items => items[Math.floor(Math.random() * items.length)]
