@@ -24,7 +24,7 @@ jobs:
       working-directory: utils/eslint/
 
     - name: Run ESLint
-      run: npm run lint
+      run: npx eslint . --debug
       working-directory: utils/eslint/
 
     - name: Cache node modules and .eslintrc.js
