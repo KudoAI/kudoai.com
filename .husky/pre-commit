@@ -12,5 +12,4 @@ else
     echo -e "\n${RED}Warning: eslint not installed${NC}"
     echo -e " To add missing dependencies, run 'npm install' from"
     echo -e " $PROJECT_ROOT\n"
-    exit 0
 fi
