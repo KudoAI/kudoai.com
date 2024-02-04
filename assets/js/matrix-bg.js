@@ -1,4 +1,4 @@
-import * as datGui from 'https://cdn.skypack.dev/dat.gui@0.7.7'
+import * as datGui from "https://cdn.skypack.dev/dat.gui@0.7.7"
 
 const state = {
     fps: 13, size: 12, charset: '0123456789ABCDEF', secDelayTilColorChange: 10,
