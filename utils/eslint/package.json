@@ -4,7 +4,7 @@
     "husky": "^9.0.10"
   },
   "scripts": {
-    "lint": "eslint ../../**/*.js --config utils/eslint/.eslintrc.js",
+    "lint": "eslint ../../**/*.js --config .eslintrc.js",
     "pre-commit": "npm run lint"
   }
 }
