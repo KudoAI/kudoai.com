@@ -43,6 +43,6 @@ SOFTWARE.
 
 <img height=6px width="100%" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png">
 
-<a href="https://github.com/elonsucks">**Home**</a> /
+<a href="https://github.com/KudoAI">**Home**</a> /
 <a href="https://github.com/elonsucks/why.elonsucks.org/discussions">Discuss</a> /
 <a href="#-kudoai--kudoaicom">Back to top ↑</a>
