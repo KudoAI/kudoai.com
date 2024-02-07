@@ -7,7 +7,7 @@ This repository contains the website code & assets for [kudoai.com](https://www.
 
 ## 💻 Contributing
 
-Before contributing, to optionally set up pre-commit linting, after forking/cloning:
+(Optional) To set up pre-commit linting, after forking/cloning:
 
 1. Navigate to project root
 
