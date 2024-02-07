@@ -19,7 +19,7 @@ This repository contains the website code & assets for [kudoai.com](https://www.
 
 ## 🏛️ License
 
-#### [MIT License](../LICENSE.md)
+### [MIT License](../LICENSE.md)
 
 **Copyright (c) 2024 [KudoAI](https://www.kudoai.com)**
 
