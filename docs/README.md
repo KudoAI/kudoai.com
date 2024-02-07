@@ -17,9 +17,7 @@ This repository contains the website code & assets for [kudoai.com](https://www.
    npm install
    ```
 
-## 🏛️ License
-
-### [MIT License](../LICENSE.md)
+## 🏛️ MIT License
 
 **Copyright (c) 2024 [KudoAI](https://www.kudoai.com)**
 
