@@ -41,7 +41,7 @@ SOFTWARE.
    npm install
    ```
 
-***Note:** Sass will lint style edits before each compilation. To learn more: https://sass-lang.com/guide/*
+***Note:** For style edits, Sass will lint before each compilation. To learn more: https://sass-lang.com/guide/*
 
 <br>
 
