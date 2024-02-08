@@ -35,11 +35,13 @@ SOFTWARE.
 
 1. Navigate to project root
 
-2. Install dev dependencies ([ESLint](https://github.com/eslint/eslint) + [Husky](https://github.com/typicode/husky)):
+2. Install dev dependencies:
 
    ```
    npm install
    ```
+
+***Note:** Sass will lint style edits before each compilation. To learn more: https://sass-lang.com/guide/*
 
 <br>
 
