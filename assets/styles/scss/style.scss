@@ -115,29 +115,29 @@ canvas { /* Matrix bg */
 .sign-up-form { width: 415px ; margin: 35px auto 66px ; display: block }
 .input {
     width: 100% ; height: 38px ; color: #333 ; vertical-align: middle ; background-color: #fff ; display: block ;
-    border: 1px solid #ccc ; margin-bottom: 10px ; padding: 8px 12px ; font-size: 14px ; line-height: 1.42857 }
-.input:focus { border-color: #3898ec ; outline: 0 }
+    border: 1px solid #ccc ; margin-bottom: 10px ; padding: 8px 12px ; font-size: 14px ; line-height: 1.42857 ;
+    &:focus { border-color: #3898ec ; outline: 0 }}
+
 .field {
     height: 54px ; color: white ; text-align: center ; text-transform: uppercase ;
     border: 1px solid white ; margin-bottom: 19px ; padding-left: 20px ; padding-right: 20px ;
-    font-size: 16px ; transition: box-shadow .15s ; background: none }
-.field:focus { box-shadow: inset 0 0 0 2px #00caf2 }
+    font-size: 16px ; transition: box-shadow .15s ; background: none ;
+    &:focus { box-shadow: inset 0 0 0 2px #00caf2 }}
 .submit-btn {
     width: 100% ; height: 54px ; color: #fff ; text-align: center ; text-transform: uppercase ;
     background-color: rgba(0, 0, 0, 0) ; border: 3px solid #fff ; margin-left: -1px ;
     padding: 4px 29px ; font-size: 22px ; font-weight: 700 ; text-decoration: none ;
-    transition: background-color .3s, color .3s ; display: block }
-.submit-btn:hover { color: #000 ; background-color: #fff }
+    transition: background-color .3s, color .3s ; display: block ;
+    &:hover { color: #000 ; background-color: #fff }}
 
 /* FOOTER */
 
 footer {
     color: #7e7c87 ; padding: 38px 0 34px ;
-    position: fixed ; bottom: 0 ; left: 0 ; right: 0 ;
+    position: fixed ; bottom: 0 ; left: 0 ; right: 0
 }
 .copyright { color: rgba(255, 255, 255, .52) ; text-align: center ; margin-bottom: 16px }
-.social-btn { opacity: .44 ; margin: 12px ; transition: all .2s }
-.social-btn:hover { opacity: 1 }
+.social-btn { opacity: .44 ; margin: 12px ; transition: all .2s ; &:hover { opacity: 1 }}
 
 @media screen and (max-width: 991px) {
     .hero-logo { width: 75vw }
@@ -147,8 +147,7 @@ footer {
     .hero-logo { width: 100% ; margin: 17vh 0 45px ; padding: 0 10px }}
 
 @media screen and (max-width: 479px) {
-    .container { padding: 0 10px }
-    .hero-logo { padding: 0 10px }
+    .container, .hero-logo { padding: 0 10px }
     .join { width: 75% ; font-size: 19px ; margin-bottom: 35px }
     .beta-line { width: 12% } .sign-up-form { width: 100% ; margin-top: 22px }
     .social-btn { margin-right: 17px } /* spread footer icons out */ }
