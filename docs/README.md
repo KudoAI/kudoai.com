@@ -37,9 +37,9 @@ SOFTWARE.
 
 2. Install dev dependencies:
 
-   ```
-   npm install
-   ```
+    ```
+    npm install
+    ```
 
 ***Note:** For style edits, Sass will lint before each compilation. To learn more: https://sass-lang.com/guide/*
 
