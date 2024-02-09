@@ -83,7 +83,7 @@ $font-families: (
 /* GENERAL */
 
 *:not(.container) { box-sizing: border-box }
-a, .submit-btn { background: rgba(0, 0, 0, 0.85) ; text-decoration: none ; cursor: crosshair }
+a, .submit-btn { text-decoration: none ; cursor: crosshair }
 body {
     color: #fff ; background-color: #000 ; padding-top: 12vh ;
     text-align: center ; font-size: 14px ; line-height: 20px ;
@@ -124,8 +124,8 @@ canvas { /* Matrix bg */
     font-size: 16px ; transition: box-shadow .15s ; background: rgba(0, 0, 0, 0.28) ;
     &:focus { box-shadow: inset 0 0 0 2px #00caf2 }}
 .submit-btn {
-    width: 100% ; height: 54px ; color: #fff ; text-align: center ; text-transform: uppercase ;
-    border: 3px solid #fff ; margin-left: -1px ; padding: 4px 29px ; display: block ;
+    width: 100% ; height: 54px ; color: #fff ; text-align: center ; text-transform: uppercase ; display: block ;
+    border: 3px solid #fff ; margin-left: -1px ; padding: 4px 29px ; background: rgba(0, 0, 0, 0.85) ;
     font-size: 22px ; font-weight: 700 ; text-decoration: none ; transition: background-color .05s, color .05s ;
     &:hover { color: #000 ; background-color: #fff }}
 
