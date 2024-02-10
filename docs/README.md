@@ -41,8 +41,6 @@ SOFTWARE.
     npm install
     ```
 
-***Note:** For style edits, Sass will lint before each compilation. To learn more: https://sass-lang.com/guide/*
-
 <br>
 
 <img height=6px width="100%" src="https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/aqua.png">
