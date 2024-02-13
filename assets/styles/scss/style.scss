@@ -137,6 +137,7 @@ footer {
 }
 .copyright { color: rgba(255, 255, 255, .52) ; text-align: center ; margin-bottom: 16px }
 .social-btn { opacity: .44 ; margin: 12px ; transition: all .2s ; &:hover { opacity: 1 }}
+a[href*="crisp.chat"] { opacity: 0 ; pointer-events: none }
 
 @media screen and (max-width: 991px) {
     .hero-logo { width: 75vw }
