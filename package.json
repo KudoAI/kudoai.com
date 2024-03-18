@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "@adamlui/minify.js": "^1.4.1",
+    "@adamlui/minify.js": "^1.4.2",
     "@adamlui/scss-to-css": "^1.6.0",
     "eslint": "^8.57.0",
     "eslint-plugin-yml": "^1.12.2",
