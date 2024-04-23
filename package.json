@@ -2,7 +2,7 @@
   "devDependencies": {
     "@adamlui/minify.js": "^1.5.4",
     "@adamlui/scss-to-css": "^1.8.0",
-    "eslint": "^9.1.0",
+    "eslint": "^9.1.1",
     "eslint-plugin-json-schema-validator": "^5.1.0",
     "husky": "^9.0.11"
   },
