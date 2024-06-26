@@ -1,6 +1,6 @@
 import js from '@eslint/js';
 import globals from 'globals';
-import eslintPluginJsonSchemaValidator from 'eslint-plugin-json-schema-validator';
+import json from 'eslint-plugin-json';
 
 export default [
     js.configs.recommended,
@@ -19,5 +19,5 @@ export default [
         },
         languageOptions: { ecmaVersion: 2022, sourceType: 'module', globals: { ...globals.browser }}
     },
-    ...eslintPluginJsonSchemaValidator.configs['flat/recommended']
+    { files: ['**/*.json'], ...json.configs['recommended'] }
 ];
