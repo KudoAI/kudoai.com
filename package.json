@@ -2,7 +2,7 @@
   "homepage": "https://www.kudoai.com",
   "devDependencies": {
     "@adamlui/minify.js": "^1.8.5",
-    "@adamlui/scss-to-css": "^1.10.14",
+    "@adamlui/scss-to-css": "^1.10.15",
     "eslint": "^9.13.0",
     "eslint-plugin-json": "^4.0.1",
     "husky": "^9.1.6"
