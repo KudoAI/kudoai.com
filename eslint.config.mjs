@@ -8,8 +8,9 @@ import stylisticJS from '@stylistic/eslint-plugin-js'
 import yml from 'eslint-plugin-yml'
 
 export default [
+    { ignores: ['**/*.min.js', '**/package-lock.json'] },
     {
-        files: ['**/*.js', '**/*.mjs'], ignores: ['**/*.min.js'],
+        files: ['**/*.js', '**/*.mjs'],
         languageOptions: { ecmaVersion: 'latest', sourceType: 'module', globals: { ...globals.browser }},
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
         rules: {
@@ -29,12 +30,10 @@ export default [
             'no-empty': 'off', // allow empty blocks
             'no-inner-declarations': 'off', // allow function declarations anywhere
             'no-useless-escape': 'off', // allow all escape chars cause ESLint sucks at detecting truly useless ones
-            'no-unused-vars': ['error', { 'caughtErrors': 'none' }], // allow unused named args in catch blocks
-            'import/no-unresolved': ['error', { ignore: ['https?://'] }] // enforce ESM import resolution
-                // + avoid false positives for URLs (https://github.com/import-js/eslint-plugin-import/issues/3118#issuecomment-2545314503)
+            'no-unused-vars': ['error', { 'caughtErrors': 'none' }] // allow unused named args in catch blocks
         }
     },
-    { files: ['**/*.json'], ignores: ['**/package-lock.json'], language: 'json/json', ...json.configs.recommended },
+    { files: ['**/*.json'], language: 'json/json', ...json.configs.recommended },
     {
         files: ['**/*.md'], language: 'markdown/commonmark', plugins: { markdown },
         rules: {
