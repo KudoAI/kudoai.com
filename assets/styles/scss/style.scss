@@ -124,14 +124,20 @@ canvas { /* Matrix bg */
     &:focus { border-color: #3898ec ; outline: 0 }}
 
 .field {
+    --transition: box-shadow 0.15s ;
     height: 54px ; color: white ; text-align: center ; text-transform: uppercase ;
     border: 1px solid white ; margin-bottom: 19px ; padding-left: 20px ; padding-right: 20px ;
-    font-size: 16px ; transition: box-shadow .15s ; background: rgba(0,0,0,0.28) ;
+    font-size: 16px ; background: rgba(0,0,0,0.28) ;
+    transition: var(--transition) ; -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
+        -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
     &:focus { box-shadow: inset 0 0 0 2px #00caf2 }}
 .submit-btn {
+    --transition: background-color 0.15s, color 0.15s ;
     width: 100% ; height: 54px ; color: #fff ; text-align: center ; text-transform: uppercase ; display: block ;
     border: 3px solid #fff ; margin-left: -1px ; padding: 4px 29px ; background: rgba(0,0,0,0.85) ;
-    font-size: 22px ; font-weight: 700 ; text-decoration: none ; transition: background-color .15s, color .15s ;
+    font-size: 22px ; font-weight: 700 ; text-decoration: none ;
+    transition: var(--transition) ; -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
+        -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
     &:hover { color: #000 ; background-color: #fff }}
 
 /* FOOTER */
@@ -141,7 +147,12 @@ footer {
     position: fixed ; bottom: 0 ; left: 0 ; right: 0
 }
 .copyright { color: rgba(255,255,255,0.52) ; text-align: center ; margin-bottom: 16px }
-.social-btn { opacity: .44 ; margin: 12px ; transition: all .2s ; &:hover { opacity: 1 }}
+.social-btn {
+    --transition: all 0.2s ;
+    opacity: .44 ; margin: 12px ;
+    transition: var(--transition) ; -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
+        -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
+    &:hover { opacity: 1 }}
 a[href*="crisp.chat"] { opacity: 0 ; pointer-events: none }
 
 @media screen and (max-width: 991px) {
