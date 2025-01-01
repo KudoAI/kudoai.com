@@ -107,7 +107,7 @@ canvas { /* Matrix bg */
     margin: 11px 0 55px ; font-size: 22px ; display: block }
 .beta-line {
     width: 29% ; height: 1px ; float: left ; position: relative ; top: 21px ;
-    background-color: rgba(255, 255, 255, .36)
+    background-color: rgba(255,255,255,0.36)
 }
 
 /* SIGNUP FORM */
@@ -121,7 +121,7 @@ canvas { /* Matrix bg */
 .field {
     height: 54px ; color: white ; text-align: center ; text-transform: uppercase ;
     border: 1px solid white ; margin-bottom: 19px ; padding-left: 20px ; padding-right: 20px ;
-    font-size: 16px ; transition: box-shadow .15s ; background: rgba(0, 0, 0, 0.28) ;
+    font-size: 16px ; transition: box-shadow .15s ; background: rgba(0,0,0,0.28) ;
     &:focus { box-shadow: inset 0 0 0 2px #00caf2 }}
 .submit-btn {
     width: 100% ; height: 54px ; color: #fff ; text-align: center ; text-transform: uppercase ; display: block ;
