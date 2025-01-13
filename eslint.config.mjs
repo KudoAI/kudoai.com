@@ -1,5 +1,6 @@
 import js from '@eslint/js'
 import globals from 'globals'
+import css from '@eslint/css'
 import importPlugin from 'eslint-plugin-import'
 import json from '@eslint/json'
 import markdown from '@eslint/markdown'
@@ -35,6 +36,7 @@ export default [
                 // + ignore false positives (https://github.com/import-js/eslint-plugin-import/issues/3118)
         }
     },
+    { files: ['**/*.css'], language: 'css/css', ...css.configs.recommended },
     { files: ['**/*.json'], language: 'json/json', ...json.configs.recommended },
     {
         files: ['**/*.md'], language: 'markdown/commonmark', plugins: { markdown },
