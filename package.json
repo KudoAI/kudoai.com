@@ -14,7 +14,7 @@
     "@adamlui/scss-to-css": "^1.10.27",
     "@eslint/css": "^0.3.0",
     "@eslint/json": "^0.10.0",
-    "@eslint/markdown": "^6.2.2",
+    "@eslint/markdown": "^6.3.0",
     "@stylistic/eslint-plugin-js": "^4.2.0",
     "eslint": "^9.21.0",
     "eslint-plugin-import": "^2.31.0",
