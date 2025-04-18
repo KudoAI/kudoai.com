@@ -142,28 +142,23 @@ canvas { /* Matrix bg */
 
 /* FOOTER */
 
-footer {
-    color: #7e7c87 ; padding: 38px 0 34px ;
-    position: fixed ; bottom: 0 ; left: 0 ; right: 0
-}
+footer { color: #7e7c87 ; padding: 38px 0 34px ; position: fixed ; bottom: 0 ; left: 0 ; right: 0 }
 .copyright { color: rgba(255,255,255,0.52) ; text-align: center ; margin-bottom: 16px }
 .social-btn {
-    --transition: all 0.2s ;
-    opacity: .44 ; margin: 12px ;
+    opacity: .44 ; margin: 12px ; --transition: all 0.2s ;
     transition: var(--transition) ; -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
         -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
-    &:hover { opacity: 1 }}
+    &:hover { opacity: 1 }
+}
 a[href*="crisp.chat"] { opacity: 0 ; pointer-events: none }
 
-@media screen and (max-width: 991px) {
-    .hero-logo { width: 75vw }
-    .join { width: 50% } .beta-line { width: 25% }}
+@media screen and (max-width: 991px) { .hero-logo { width: 75vw } .join { width: 50% } .beta-line { width: 25% }}
 
-@media screen and (max-width: 767px) {
-    .hero-logo { width: 100% ; margin: 17vh 0 45px ; padding: 0 10px }}
+@media screen and (max-width: 767px) { .hero-logo { width: 100% ; margin: 17vh 0 45px ; padding: 0 10px }}
 
 @media screen and (max-width: 479px) {
     .container, .hero-logo { padding: 0 10px }
     .join { width: 75% ; font-size: 19px ; margin-bottom: 35px }
     .beta-line { width: 12% } .sign-up-form { width: 100% ; margin-top: 22px }
-    .social-btn { margin-right: 17px } /* spread footer icons out */ }
+    .social-btn { margin-right: 17px } /* spread footer icons out */
+}
