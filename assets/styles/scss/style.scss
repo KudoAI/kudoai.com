@@ -142,6 +142,8 @@ canvas { /* Matrix bg */
 
 /* FOOTER */
 
+.badges > a { cursor: pointer }
+.f6s-badge { opacity: 0.88 ; height: 49px ; width: auto ; transition: opacity 0.2s ease ; &:hover { opacity: 1 }}
 footer { color: #7e7c87 ; padding: 38px 0 34px ; position: fixed ; bottom: 0 ; left: 0 ; right: 0 }
 .copyright { color: rgba(255,255,255,0.52) ; text-align: center ; margin-bottom: 16px }
 .social-btn {
@@ -160,5 +162,6 @@ a[href*="crisp.chat"] { opacity: 0 ; pointer-events: none }
     .container, .hero-logo { padding: 0 10px }
     .join { width: 75% ; font-size: 19px ; margin-bottom: 35px }
     .beta-line { width: 12% } .sign-up-form { width: 100% ; margin-top: 22px }
+    .badges { margin: 13px 0 } /* y-space footer badges */
     .social-btn { margin-right: 17px } /* spread footer icons out */
 }
