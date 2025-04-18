@@ -21,7 +21,7 @@
 
     // PREVIEW page
     const availPort = await getPort({ port: portNumbers(3000, 3999) })
-    require('child_process').exec(`http-server -p ${availPort}`).stdout.on('data', data => {
+    spawn('http-server', ['-p', availPort], { shell: false }).stdout.on('data', data => {
         if (/Available on:[\s\S]+/.test(data)) { // server ready msg, enrich then preview site
             open(`http://localhost:${availPort}`)
             return console.log(`Previewing ${bw}kudoai.com${nc} @ ${by}http://localhost:${availPort}${nc}\n\n`
