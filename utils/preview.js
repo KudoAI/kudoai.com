@@ -26,7 +26,7 @@
             open(`http://localhost:${availPort}`)
             return console.log(`Previewing ${bw}kudoai.com${nc} @ ${by}http://localhost:${availPort}${nc}\n\n`
                 + 'Close this window to stop server\n'
-                + `Press ${bw}CTRL+SHIFT+R${nc} in browser to clear cache (if assets/data/urls.json updated)`)
+                + `Press ${bw}CTRL+SHIFT+R${nc} in browser to clear cache`)
         }
     })
 
