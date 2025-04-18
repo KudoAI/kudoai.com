@@ -2,12 +2,14 @@
   "homepage": "https://www.kudoai.com",
   "scripts": {
     "prepare": "husky",
+    "dev": "node utils/preview",
     "lint": "eslint . --cache",
     "lint:all": "eslint .",
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
     "build:js": "minify-js assets/js",
-    "build:css": "scss-to-css assets/styles"
+    "build:css": "scss-to-css assets/styles",
+    "preview": "node utils/preview"
   },
   "devDependencies": {
     "@adamlui/minify.js": "^1.8.6",
@@ -18,10 +20,14 @@
     "@html-eslint/eslint-plugin": "^0.39.0",
     "@html-eslint/parser": "^0.39.0",
     "@stylistic/eslint-plugin-js": "^4.2.0",
+    "cross-spawn": "^7.0.6",
     "eslint": "^9.24.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-regexp": "^2.7.0",
     "eslint-plugin-yml": "^1.17.0",
-    "husky": "^9.1.7"
+    "get-port": "^7.1.0",
+    "http-server": "^14.1.1",
+    "husky": "^9.1.7",
+    "open": "^10.1.1"
   }
 }

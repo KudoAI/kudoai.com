@@ -14,7 +14,8 @@ export default [
     { ignores: ['**/*.min.js', '**/*.min.css', '**/package-lock.json'] },
     {
         files: ['**/*.{js,mjs}'],
-        languageOptions: { ecmaVersion: 'latest', sourceType: 'module', globals: { ...globals.browser }},
+        languageOptions: {
+            ecmaVersion: 'latest', sourceType: 'module', globals: { ...globals.browser, ...globals.node }},
         plugins: { 'import': importPlugin, 'js-styles': stylisticJS, regexp },
         rules: {
             ...js.configs.recommended.rules,
