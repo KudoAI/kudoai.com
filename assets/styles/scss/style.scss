@@ -147,7 +147,7 @@ canvas { /* Matrix bg */
 footer { color: #7e7c87 ; padding: 38px 0 34px ; position: fixed ; bottom: 0 ; left: 0 ; right: 0 }
 .copyright { color: rgba(255,255,255,0.52) ; text-align: center ; margin-bottom: 16px }
 .social-btn {
-    opacity: .44 ; margin: 12px ; --transition: all 0.2s ;
+    opacity: .44 ; margin: 12px ; --transition: all 0.2s ; cursor: pointer ;
     transition: var(--transition) ; -webkit-transition: var(--transition) ; -moz-transition: var(--transition) ;
         -o-transition: var(--transition) ; -ms-transition: var(--transition) ;
     &:hover { opacity: 1 }
