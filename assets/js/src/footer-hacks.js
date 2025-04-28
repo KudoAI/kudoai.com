@@ -1,5 +1,5 @@
 // Insert copyright year
-document.querySelector('.copyright').innerHTML = `© 2023—${new Date().getFullYear()} KudoAI`
+document.querySelector('.copyright').innerHTML = `© ${new Date().getFullYear()} KudoAI`
 
 // Fade-in badges + add hover listeners
 document.addEventListener('DOMContentLoaded', () => {
