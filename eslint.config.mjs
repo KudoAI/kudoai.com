@@ -39,7 +39,10 @@ export default [
                 // + ignore false positives (https://github.com/import-js/eslint-plugin-import/issues/3118)
         }
     },
-    { files: ['**/*.css'], language: 'css/css', ...css.configs.recommended },
+    {
+        files: ['**/*.css'], language: 'css/css', plugins: { css },
+        rules: { ...css.configs.recommended.rules, 'css/no-important': 'off' }
+    },
     {
         files: ['**/*.html'], languageOptions: { parser: htmlParser }, plugins: { '@html-eslint': html },
         rules: {
