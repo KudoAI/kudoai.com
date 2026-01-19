@@ -7,7 +7,7 @@
     "lint:all": "eslint .",
     "lint:fix": "eslint . --fix --cache",
     "lint:fix-all": "eslint . --fix",
-    "build:js": "minify-js assets/js",
+    "build:js": "minify-js assets/js/src assets/js/min",
     "build:css": "scss-to-css assets/styles",
     "preview": "node utils/preview"
   },
