@@ -1,4 +1,4 @@
-<a href="#%EF%B8%8F-mit-license">
+<a href="LICENSE.md">
     <img height=28 src="https://img.shields.io/badge/License-MIT-fc4f2d.svg?logo=internetarchive&logoColor=white&color=orange&labelColor=464646&style=for-the-badge"></a>
 <a href="https://www.codefactor.io/repository/github/kudoai/kudoai.com">
     <img height=28 src="https://img.shields.io/codefactor/grade/github/kudoai/kudoai.com?label=Code+Quality&logo=codefactor&logoColor=white&labelColor=464646&color=b5fc7b&style=for-the-badge"></a>
