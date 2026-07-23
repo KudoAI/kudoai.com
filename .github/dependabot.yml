@@ -6,7 +6,7 @@ updates:
     schedule:
       interval: daily
     cooldown:
-      semver-minor-days: 7
+      default-days: 7
 
   - package-ecosystem: npm
     directory: /
