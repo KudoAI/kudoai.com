@@ -25,14 +25,16 @@ resize()
 const random = items => items[Math.floor(Math.random() * items.length)]
 
 const draw = () => {
-    if (Date.now() - startTime >= state.secDelayTilColorChange*1000) { // begin transition thru colors
-        state.hue = (state.hue + 1) % 360
-        state.saturation = 100 + Math.sin((state.hue * Math.PI) / 180) *50
-        state.lightness = 50 + Math.cos((state.hue * Math.PI) / 180) *25
+    if (Date.now() - startTime >= state.secDelayTilColorChange *1000) { // begin transition thru colors
+        state.hue = (state.hue +1) % 360
+        state.saturation = 100 + Math.sin((state.hue * Math.PI) /180) *50
+        state.lightness = 50 + Math.cos((state.hue * Math.PI) /180) *25
     }
-    const rgbColor = `hsl(${ state.hue }, ${ state.saturation }%, ${ state.lightness *0.65 }%)`
-    ctx.fillStyle = 'rgba(0,0,0,.05)' ; ctx.fillRect(0, 0, w, h)
-    ctx.fillStyle = rgbColor ; ctx.font = state.size + 'px sans-serif'
+    const rgbColor = `hsl(${state.hue}, ${state.saturation}%, ${ state.lightness *0.65 }%)`
+    ctx.fillStyle = 'rgba(0,0,0,.05)'
+    ctx.fillRect(0, 0, w, h)
+    ctx.fillStyle = rgbColor
+    ctx.font = `${state.size}px sans-serif`
     for (let i = 0 ; i < p.length ; i++) {
         let v = p[i]
         ctx.fillText(random(state.charset), i * state.size, v)
