@@ -1,7 +1,7 @@
 import datGui from 'https://cdn.skypack.dev/dat.gui@0.7.7'
 
 const state = {
-    fps: 9, size: 12, charset: '0123456789ABCDEF', secDelayTilColorChange: 10,
+    fps: 12, size: 12, charset: '0123456789ABCDEF', secDelayTilColorChange: 10,
     hue: 120, saturation: 3, lightness: 54 // init at #878e87 / HSL(120, 3%, 54.31%)
 }
 
