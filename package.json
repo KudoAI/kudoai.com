@@ -1,5 +1,5 @@
 {
-  "homepage": "https://www.kudoai.com",
+  "homepage": "https://www.kudoai.org",
   "scripts": {
     "prepare": "husky",
     "dev": "node utils/preview",

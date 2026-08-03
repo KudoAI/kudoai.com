@@ -25,7 +25,7 @@
     spawn('http-server', ['-p', availPort], { shell: false }).stdout.on('data', data => {
         if (/Available on:[\s\S]+/.test(data)) { // server ready msg, enrich then preview site
             open(`http://localhost:${availPort}`)
-            return console.log(`Previewing ${bw}kudoai.com${nc} @ ${by}http://localhost:${availPort}${nc}\n\n`
+            return console.log(`Previewing ${bw}kudoai.org${nc} @ ${by}http://localhost:${availPort}${nc}\n\n`
                 + 'Close this window to stop server\n'
                 + `Press ${bw}CTRL+SHIFT+R${nc} in browser to clear cache`)
         }
